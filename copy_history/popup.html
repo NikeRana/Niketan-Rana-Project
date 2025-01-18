@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 10px;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    #copiesList {
+      margin-top: 10px;
+    }
+
+    .copy-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+
+    .text-container {
+      flex-grow: 1;
+      margin-right: 10px;
+    }
+
+    .text-container p {
+      margin: 0;
+      font-size: 12px;
+      font-weight: bold;
+      color: #007bff;
+    }
+
+
+    .text-container small {
+      font-size: 10px;
+      color: #666;
+      margin-top: 5px;
+      cursor: pointer;
+      display: block;
+      text-decoration: underline;
+
+    }
+
+    button {
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      background: none;
+    }
+
+    .icon {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+
+    .icon.copy {
+      background-image: url('./images/copy-icon.png');
+      /* Update with the correct path */
+      background-size: cover;
+    }
+
+    .icon.delete {
+      background-image: url('./images/delete-icon.png');
+      /* Update with the correct path */
+      background-size: cover;
+    }
+
+    button .icon.copy && button .icon.delete {
+      margin-left: 10px;
+      margin-right: 10px;
+      padding: 3px;
+    }
+
+    button:hover .icon.copy {
+      transform: scale(1.2);
+      background-color: #85ffa1;
+      border-radius: 20%;
+    }
+
+    button:hover .icon.delete {
+      transform: scale(1.2);
+      background-color: #ff6d7a;
+      border-radius: 20%;
+    }
+
+    .first-time {
+      font-size: 12px;
+      color: rgb(255, 138, 117);
+    }
+
+    #clearAll {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    #clearAll:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Copied Texts</h1>
+  <div id="copiesList"></div>
+  <button id="clearAll">Clear All</button>
+  <script src="popup.js"></script>
+</body>
+
+</html>
